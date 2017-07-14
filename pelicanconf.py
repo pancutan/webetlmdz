@@ -8,7 +8,7 @@ SITEURL = 'http://etlmdz.github.io'
 
 PATH = 'content'
 
-THEME = 'pelican-bootstrap3'
+THEME = 'local-themes/pelican-bootstrap3'
 
 PLUGIN_PATHS = ["pelican-plugins",]
 
