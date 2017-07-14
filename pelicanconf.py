@@ -1,0 +1,61 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- #
+from __future__ import unicode_literals
+
+AUTHOR = u'ETLMdz'
+SITENAME = u'ETLMdz'
+SITEURL = 'http://etlmdz.github.io'
+
+PATH = 'content'
+
+THEME = 'pelican-bootstrap3'
+
+PLUGIN_PATHS = ["pelican-plugins",]
+
+# for CRITICAL: UndefinedError: 'gettext' is undefined
+# because pelican-bootstrap3
+PLUGINS = ['i18n_subsites',]
+
+# CRITICAL: UndefinedError: '_' is undefined
+# because pelican-bootstrap3
+JINJA_EXTENSIONS = ['jinja2.ext.i18n',]
+
+TIMEZONE = 'America/Argentina/Mendoza'
+
+DEFAULT_LANG = u'es'
+
+# Feed generation is usually not desired when developing
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+
+# Blogroll
+LINKS = (('Pelican', 'http://getpelican.com/'),
+         ('Python.org', 'http://python.org/'),
+         ('Jinja2', 'http://jinja.pocoo.org/'),
+         ('You can modify those links in your config file', '#'),)
+
+# Social widget
+SOCIAL = (('twitter', 'http://twitter.com/etlmdz_'),
+          ('github', 'http://github.com/etlmdz'),
+          ('facebook', 'https://www.facebook.com/ETLMdz/'),
+          ('G+', 'https://etlmdz.github.io/', 'google-plus'),)
+
+
+
+DEFAULT_PAGINATION = 3
+
+# Uncomment following line if you want document-relative URLs when developing
+RELATIVE_URLS = True
+
+# static paths will be copied without parsing their contents
+STATIC_PATHS = [
+    'pictures',
+    'extra/robots.txt',
+    ]
+
+# SHARIFF = True
+
+# BOOTSTRAP_THEME = 'spacelab'
