@@ -28,6 +28,14 @@ Se necesita virtualenv y otros paquetes (a adocumentar).
 
 	make html
 
+### Ver presentacion html
+
+	make devserver
+	sensible-browser http://localhost:8000.
+
+Para detener el server web
+
+	make stopserver
 
 ## Realizar cambios
 
@@ -36,4 +44,6 @@ maquetado se ajusta en `pelicanconf.py`.
 
 Los archivos de salida estarán en `output/` y no serán registrados por este repositorio.
 
+## Más info
 
+Ver http://docs.getpelican.com
