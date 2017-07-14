@@ -38,7 +38,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('twitter', 'http://twitter.com/etlmdz1'),
+SOCIAL = (('Novedades', 'blog_index.html', 'pencil'),
+          ('twitter', 'http://twitter.com/etlmdz1'),
           ('github', 'http://github.com/etlmdz'),
           ('facebook', 'https://www.facebook.com/ETLMdz/'),
           ('G+', 'https://etlmdz.github.io/', 'google-plus'),)
@@ -55,6 +56,9 @@ STATIC_PATHS = [
     'pictures',
     'extra/robots.txt',
     ]
+
+# http://docs.getpelican.com/en/stable/faq.html#how-can-i-use-a-static-page-as-my-home-page
+INDEX_SAVE_AS = 'blog_index.html'
 
 # SHARIFF = True
 
