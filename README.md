@@ -4,9 +4,36 @@ Página web realizada con [Pelican](https://getpelican.com/).
 
 ## Despliegue
 
-TODO: dependencias
+### Requisitos
 
-* instalar pelican en un virtualenv
+La web se puede desplegar en Ubuntu trusty, pero puede también ser desarrollada en otros sistemas.
 
-TODO: pasos siguientes
+Se necesita virtualenv y otros paquetes (a adocumentar).
+
+### Instalar pelican en virtualenv
+
+	cd /directorio/favorito/
+	mkdir webetlmdz
+	virtualenv webetlmdz
+	cd webetlmdz/
+	source bin/activate
+	pip install pelican Markdown
+
+### Instalar este repositorio
+
+	git clone --recursive https://github.com/mabeett/webetlmdz.git #(este repositorio)
+	cd webetlmdz/
+
+### Generar la web estática
+
+	make html
+
+
+## Realizar cambios
+
+El contenido del sitio está en el directorio `content/`. La configuración de
+maquetado se ajusta en `pelicanconf.py`.
+
+Los archivos de salida estarán en `output/` y no serán registrados por este repositorio.
+
 
