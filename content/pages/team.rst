@@ -2,6 +2,7 @@ Team
 ####
 
 :slug: team
+:category: nosotros
 :authors: ETLMdz
 :summary: Descripción de grupo, integrantes
 
