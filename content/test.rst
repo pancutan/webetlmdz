@@ -18,3 +18,9 @@ Just an image.
    :width: 600 px
    :alt: alternate text
 
+.. image:: |filename|/pictures/Sushi_Macro.jpg
+   :alt: aaa alternate text
+
+
+.. image:: |filename|/pictures/Sushi.jpg
+   :alt: aaa alternate text
