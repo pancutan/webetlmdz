@@ -169,9 +169,9 @@
 <div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
     <div class="row">
         {% if not HIDE_SIDEBAR or ABOUT_ME or AVATAR %}
-        <div class="col-sm-9{% if SIDEBAR_ON_LEFT %} col-sm-push-3{% endif %}">
+        <div class="col-sm-5{% if SIDEBAR_ON_LEFT %} col-sm-push-3{% endif %}  col-md-offset-2">
         {% else %}
-        <div class="col-lg-12">
+        <div class="col-lg-8  col-md-offset-2">
         {% endif %}
         {% block breadcrumbs %}
         {% endblock %}
