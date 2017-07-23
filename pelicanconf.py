@@ -35,7 +35,7 @@ AUTHOR_FEED_RSS = None
 LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
          ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+         ('You can modify...', '#'),)
 
 # Social widget
 SOCIAL = (('Novedades', 'blog_index.html', 'pencil'),
@@ -63,3 +63,7 @@ INDEX_SAVE_AS = 'blog_index.html'
 # SHARIFF = True
 
 # BOOTSTRAP_THEME = 'spacelab'
+
+# HIDE_SIDEBAR = True
+HIDE_SIDEBAR = False
+

@@ -2,6 +2,68 @@
    <div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
       <hr>
       <div class="row">
+               <div class="col-sm-2"></div>
+         <div class="col-sm-3 text-right visible-lg-block"><h4>{{ _('Social') }}</h4></div>
+         <div class="col-sm-1 text-center visible-lg-block"><h4>{{ _('&') }}</h4></div>
+         <div class="col-sm-3 text-left visible-lg-block"><h4>{{ _('Links') }}</h4></div>
+
+         <div class="col-sm-3 text-center hidden-lg"><h4>{{ _('Social') }}</h4></div>
+      </div>
+
+      <div class="row">
+  {% if SOCIAL %}
+    {% from 'includes/sidebar/macros.jinja' import title %}
+         <div class="col-sm-2"></div>
+         <div class="col-sm-2">
+             <ul class="nav list-group"  style="margin-bottom: 2px;">
+    {% for s in SOCIAL %}
+      {% if s[2] %}
+        {% set name_sanitized = s[2]|lower|replace('+','-plus')|replace(' ','-') %}
+      {% else %}
+        {% set name_sanitized = s[0]|lower|replace('+','-plus')|replace(' ','-') %}
+      {% endif %}
+      {% if name_sanitized in ['flickr', 'slideshare', 'instagram', 'spotify', 'stack-overflow', 'weibo', 'line-chart', 'home', 'user', 'users', 'envelope', 'envelope-o', 'stack-exchange', 'hacker-news'] %}
+        {% set iconattributes = '"fa fa-' ~ name_sanitized ~ ' fa-lg"' %}
+      {% else %}
+        {% set iconattributes = '"fa fa-' ~ name_sanitized ~ '-square fa-lg"' %}
+      {% endif %}
+                 <li class="visible-lg-block"><a href="{{ s[1] }}"><div class="text-left"><i class={{ iconattributes }}></i> {{ s[0] }}</div></a></li>
+                 <li class="hidden-lg"><a href="{{ s[1] }}" style="padding: 2px;"><div class="row">
+                              <div class="col-xs-5 col-xs-offset-4 col-sm-5 col-sm-offset-4 text-left"><i class={{ iconattributes }}></i> {{ s[0] }}</div>
+                 </div></a></li>
+      {%- if ((loop.index) % ((loop.length//2)+1)) == 0 %}
+             </ul>
+         </div>
+         <div class="col-sm-2">
+             <ul class="nav list-group">
+      {% endif %}
+    {% endfor %}
+             </ul>
+         </div>
+  {% endif %}
+
+  {% if LINKS %}
+    {% from 'includes/sidebar/macros.jinja' import title %}
+
+         <div class="col-sm-2">
+             <div class="col-sm-3 text-center hidden-lg"><h4>{{ _('Links') }}</h4></div>
+             <ul class="nav list-group">
+
+    {% for name, link in LINKS %}
+      {%- if (loop.index % ((loop.length//2)+1)) == 0 %}
+             </ul>
+         </div>
+         <div class="col-sm-2">
+             <ul class="nav list-group">
+      {% endif %}
+         <li><a href="{{ link }}" target="_blank" class="text-center">{{ name }}</a></li>
+    {% endfor %}
+             </ul>
+         </div>
+  {% endif %}
+      </div>
+      <hr>
+      <div class="row">
          {% if articles %}
            {% if articles[0].modified %}
              {% set copy_date = articles[0].modified.strftime('%Y') %}
@@ -24,5 +86,6 @@
          </div>
          <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">{{ _('Back to top') }}</a></p></div>
       </div>
+
    </div>
 </footer>
