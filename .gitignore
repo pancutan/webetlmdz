@@ -1,3 +1,7 @@
 output/
 *.pyc
 *.swp
+
+# archivos que se generan con make devserver
+pelican.pid
+srv.pid
