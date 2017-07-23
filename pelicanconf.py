@@ -10,11 +10,13 @@ PATH = 'content'
 
 THEME = 'local-themes/pelican-bootstrap3'
 
+# THEME = 'pelican-themes/built-texts'
+
 PLUGIN_PATHS = ["pelican-plugins",]
 
 # for CRITICAL: UndefinedError: 'gettext' is undefined
 # because pelican-bootstrap3
-PLUGINS = ['i18n_subsites',]
+PLUGINS = ['i18n_subsites', 'series', 'tag_cloud']
 
 # CRITICAL: UndefinedError: '_' is undefined
 # because pelican-bootstrap3
@@ -60,6 +62,12 @@ STATIC_PATHS = [
 # http://docs.getpelican.com/en/stable/faq.html#how-can-i-use-a-static-page-as-my-home-page
 INDEX_SAVE_AS = 'blog_index.html'
 
+
+GITHUB_USER = 'etlmdz'
+# GITHUB_REPO_COUNT = False
+# GITHUB_SKIP_FORK = False
+GITHUB_SHOW_USER_LINK = True
+
 # SHARIFF = True
 
 # BOOTSTRAP_THEME = 'spacelab'
@@ -67,3 +75,8 @@ INDEX_SAVE_AS = 'blog_index.html'
 # HIDE_SIDEBAR = True
 HIDE_SIDEBAR = False
 
+DISPLAY_CATEGORIES_ON_SIDEBAR = True
+DISPLAY_TAGS_ON_SIDEBAR = True
+
+SHOW_SERIES = True
+DISPLAY_SERIES_ON_SIDEBAR = True
