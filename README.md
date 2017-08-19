@@ -21,7 +21,7 @@ Se necesita virtualenv y otros paquetes (a adocumentar).
 
 ### Instalar este repositorio
 
-	git clone --recursive https://github.com/mabeett/webetlmdz.git #(este repositorio)
+	git clone --recursive https://github.com/etlmdz/webetlmdz.git #(este repositorio)
 	cd webetlmdz/
 
 ### Generar la web estática
