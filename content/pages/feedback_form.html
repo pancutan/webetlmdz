@@ -9,99 +9,106 @@
         <meta name="summary" content="Invitación a dar feedback" />
     </head>
     <body>
-    
+
 <div class="row">
     <div class="col-md-12">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    Conanos qué te gustaría que tratemos (test)
+                    Contanos qué te gustaría que tratemos (test)
                 </div>
                 <div class="panel-body">
-                    <form role="form">
+                    <!-- Dev -->
+                    <!--<form role="form" action="http://localhost:3010/interesados" method="post">-->
+
+                    <!-- PRD -->
+                    <form role="form" action="http://etlmdz-formu.herokuapp.com/interesados" method="post">
+
                         <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Nombre"/>
+                            <input class="form-control" type="text" placeholder="Nombre" name="nombre" />
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="text" placeholder="E-mail"/>
+                            <input class="form-control" type="text" placeholder="Apellido" name="apellido" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="E-mail" name="email" />
                         </div>
 
                         <div class="form-group">
-                                <!-- <label>For Role </label> -->
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Lenguajes libres: Python, Ruby, Javascript, PHP, etc
+                                        <input type="checkbox" name="topico[1]" value=""/>Lenguajes libres: Python, Ruby, Javascript, PHP, etc
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Minería de datos, scrapping, APIs
+                                        <input type="checkbox" name="topico[2]" value=""/>Minería de datos, scrapping, APIs
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Productividad: shells, editores, window managers, etc
+                                        <input type="checkbox" name="topico[3]" value=""/>Productividad: shells, editores, window managers, etc
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Contenedores, virtualización
+                                        <input type="checkbox" name="topico[4]" value=""/>Contenedores, virtualización
                                     </label>
                                 </div>
 
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Sistemas operativos: GNU/Linux, FreeBSD, etc
+                                        <input type="checkbox" name="topico[5]" value=""/>Sistemas operativos: GNU/Linux, FreeBSD, etc
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Networking: balanceadores, multitenancy
+                                        <input type="checkbox" name="topico[6]" value=""/>Networking: balanceadores, multitenancy
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Seguridad y criptografía
+                                        <input type="checkbox" name="topico[7]" value=""/>Seguridad y criptografía
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Bases de datos
+                                        <input type="checkbox" name="topico[8]" value=""/>Bases de datos
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>GIT
+                                        <input type="checkbox" name="topico[9]" value=""/>GIT
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Monedas digitales
+                                        <input type="checkbox" name="topico[10]" value=""/>Monedas digitales
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Frameworks web
+                                        <input type="checkbox" name="topico[11]" value=""/>Frameworks web
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Hardware libre
+                                        <input type="checkbox" name="topico[12]" value=""/>Hardware libre
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Clouds
+                                        <input type="checkbox" name="topico[13]" value=""/>Clouds
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value=""/>Data science
+                                        <input type="checkbox" name="topico[14]" value=""/>Data science
                                     </label>
                                 </div>
 
 
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Sorprendenos"/>
+                                <input class="form-control" name="sorprendenos" type="text" placeholder="Sorprendenos"/>
                             </div>
                         </div>
 
